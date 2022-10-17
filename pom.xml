@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>ExtentReports</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>ExtentReports</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <maven.compiler.source>1.15</maven.compiler.source>
+        <maven.compiler.target>1.15</maven.compiler.target>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.15</source>
+                    <target>1.15</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+
+                <configuration>
+                    <outputDirectory>
+                        ${project.build.directory}
+                    </outputDirectory>
+                </configuration>
+            </plugin>
+
+            <!--plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <id>auto-clean</id>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+
+                    </execution>
+                </executions>
+            </plugin-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+                <!--configuration>
+                    <useSystemClassLoader>false</useSystemClassLoader>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>bigPackage.xml</suiteXmlFile>
+                        <suiteXmlFile>SOFBatchReport.xml</suiteXmlFile>
+                        <suiteXmlFile>ParamCombinations.xml</suiteXmlFile>
+                        <suiteXmlFile>Report360DownLoad.xml</suiteXmlFile>
+                        <suiteXmlFile>IASSuite.xml</suiteXmlFile>
+                        <suiteXmlFile>FixMissingPrice.xml</suiteXmlFile>
+                    </suiteXmlFiles>>
+                </configuration-->
+            </plugin>
+
+        </plugins>
+
+    </build>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+        <!--dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.141.59</version>
+        </dependency-->
+
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.2.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.3.0</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-server</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+        <!--  https://mvnrepository.com/artifact/com.google.guava/guava-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>31.1-jre</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+
+
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/jog4j-api -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.9.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/jog4j-core -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.9.1</version>
+        </dependency>
+        <!-- need to disable-->
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.3</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+
+        <dependency>
+            <groupId>htmlunit</groupId>
+            <artifactId>htmlunit</artifactId>
+            <version>1.13</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.12</version>
+        </dependency>
+
+        <dependency>
+            <groupId>xml-apis</groupId>
+            <artifactId>xml-apis</artifactId>
+            <version>1.4.01</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.12</version>
+            <!--exclusions>
+                <exclusion>
+                    <artifactId>xml-apis</artifactId>
+                    <groupId>xml-apis</groupId>
+                </exclusion>
+            </exclusions-->
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/junit/junit-->
+        <dependency>
+            <groupId>ru.yandex.qatools.ashot</groupId>
+            <artifactId>ashot</artifactId>
+            <version>1.4.12</version>
+            <type>maven-plugin</type>
+
+        </dependency>
+
+        <dependency>
+            <groupId>javax.xml</groupId>
+            <artifactId>jaxb-impl</artifactId>
+            <version>2.1</version>
+            <type>maven-plugin</type>
+            <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.jtds</groupId>
+            <artifactId>jtds</artifactId>
+            <version>1.3.1</version>
+            <type>maven-plugin</type>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/jcifs/jcifs-->
+        <dependency>
+            <groupId>jcifs</groupId>
+            <artifactId>jcifs</artifactId>
+            <version>1.3.17</version>
+        </dependency>
+        <!--dependency>
+            <groupId>com.ias.krypton</groupId>
+            <artifactId>krypton-data-layer</artifactId>
+            <version>1.2.8</version>
+            <type>maven-plugin</type>
+
+        </dependency-->
+
+
+
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.6.1</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.0-alpha5</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>4.1.3</version>
+        </dependency>
+
+    </dependencies>
+
+
+</project>
